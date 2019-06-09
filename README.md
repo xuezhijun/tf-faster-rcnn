@@ -171,8 +171,8 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
 
 3. Visualization with Tensorboard
   ```Shell
-  tensorboard --logdir=tensorboard/vgg16/voc_2007_trainval/ --port=7001 &
-  tensorboard --logdir=tensorboard/vgg16/coco_2014_train+coco_2014_valminusminival/ --port=7002 &
+  tensorboard --logdir=tensorboard/vgg16/voc_2007_trainval/
+  tensorboard --logdir=tensorboard/vgg16/coco_2014_train+coco_2014_valminusminival/
   ```
 
 4. Test and evaluate
@@ -229,7 +229,7 @@ Or for a formal paper, [Spatial Memory Network](https://arxiv.org/abs/1704.04224
       year={2017}
     }
 
-For convenience, here is the faster RCNN citation:
+For convenience, here is the Faster RCNN citation:
 
     @inproceedings{renNIPS15fasterrcnn,
         Author = {Shaoqing Ren and Kaiming He and Ross Girshick and Jian Sun},
