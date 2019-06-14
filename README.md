@@ -117,6 +117,7 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
 
 2. Create a folder and a soft link to use the pre-trained model
   ```Shell
+  # at repository root
   NET=res101
   TRAIN_IMDB=voc_2007_trainval+voc_2012_trainval
   mkdir -p output/${NET}/${TRAIN_IMDB}
