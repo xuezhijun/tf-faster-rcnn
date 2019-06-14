@@ -79,8 +79,7 @@ Additional features not mentioned in the [report](https://arxiv.org/pdf/1702.021
   | Grid K520 (AWS g2.2xlarge) | sm_30 |
   | Tesla K80 (AWS p2.xlarge) | sm_37 |
 
-  **Note**: You are welcome to contribute the settings on your end if you have made the code work properly on other GPUs. Also even if you are only using CPU tensorflow, GPU based code (for NMS) will be used by default, so please set **USE_GPU_NMS False** to get the correct output.
-
+  **Note**: You are welcome to contribute the settings on your end if you have made the code work properly on other GPUs. Also even if you are only using CPU tensorflow, GPU based code (for NMS) will be used by default, so please set **USE_GPU_NMS False** to get the correct output.(Not recommend!)
 
 3. Build the Cython modules
   ```Shell
@@ -163,18 +162,19 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
   ```Shell
   ./experiments/scripts/train_faster_rcnn.sh [GPU_ID] [DATASET] [NET]
   # GPU_ID is the GPU you want to test on
-  # NET in {vgg16, res50, res101, res152} is the network arch to use
+  # NET in {vgg16, res50, res101, res152, mobile} is the network arch to use
   # DATASET {pascal_voc, pascal_voc_0712, coco} is defined in train_faster_rcnn.sh
   # Examples:
   ./experiments/scripts/train_faster_rcnn.sh 0 pascal_voc vgg16
-  ./experiments/scripts/train_faster_rcnn.sh 1 coco res101
+  ./experiments/scripts/train_faster_rcnn.sh 1 pascal_voc_0712 res101
+  ./experiments/scripts/train_faster_rcnn.sh 2 coco mobile
   ```
   **Note**: Please double check you have deleted soft link to the pre-trained models before training. If you find NaNs during training, please refer to [Issue 86](https://github.com/endernewton/tf-faster-rcnn/issues/86). Also if you want to have multi-gpu support, check out [Issue 121](https://github.com/endernewton/tf-faster-rcnn/issues/121).
 
 3. Visualization with Tensorboard
   ```Shell
   tensorboard --logdir=tensorboard/vgg16/voc_2007_trainval/
-  tensorboard --logdir=tensorboard/vgg16/coco_2014_train+coco_2014_valminusminival/
+  tensorboard --logdir=tensorboard/mobile/coco_2014_train+coco_2014_valminusminival/
   ```
 
 4. Test and evaluate
