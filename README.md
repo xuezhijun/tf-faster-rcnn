@@ -181,11 +181,12 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
   ```Shell
   ./experiments/scripts/test_faster_rcnn.sh [GPU_ID] [DATASET] [NET]
   # GPU_ID is the GPU you want to test on
-  # NET in {vgg16, res50, res101, res152} is the network arch to use
+  # NET in {vgg16, res50, res101, res152, mobile} is the network arch to use
   # DATASET {pascal_voc, pascal_voc_0712, coco} is defined in test_faster_rcnn.sh
   # Examples:
   ./experiments/scripts/test_faster_rcnn.sh 0 pascal_voc vgg16
-  ./experiments/scripts/test_faster_rcnn.sh 1 coco res101
+  ./experiments/scripts/test_faster_rcnn.sh 1 pascal_voc_0712 res101
+  ./experiments/scripts/test_faster_rcnn.sh 2 coco mobile
   ```
 
 5. You can use ``tools/reval.sh`` for re-evaluation
