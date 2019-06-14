@@ -1,5 +1,5 @@
 # tf-faster-rcnn is deprecated:
-For a good and more up-to-date implementation for faster/mask RCNN with multi-gpu support, please see the example in TensorPack [here](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN).
+For a good and more up-to-date implementation for Faster/Mask RCNN with multi-gpu support, please see the example in TensorPack [here](https://github.com/tensorpack/tensorpack/tree/master/examples/FasterRCNN).
 
 # tf-faster-rcnn
 A Tensorflow implementation of faster RCNN detection framework by Xinlei Chen (xinleic@cs.cmu.edu). This repository is based on the python Caffe implementation of faster RCNN available [here](https://github.com/rbgirshick/py-faster-rcnn).
@@ -60,7 +60,7 @@ Additional features not mentioned in the [report](https://arxiv.org/pdf/1702.021
 ### Installation
 1. Clone the repository
   ```Shell
-  git clone https://github.com/endernewton/tf-faster-rcnn.git
+  git clone https://github.com/xuezhijun/tf-faster-rcnn.git
   ```
 
 2. Update your -arch in setup script to match your GPU
@@ -68,6 +68,7 @@ Additional features not mentioned in the [report](https://arxiv.org/pdf/1702.021
   cd tf-faster-rcnn/lib
   # Change the GPU architecture (-arch) if necessary
   vim setup.py
+  # You can also use gedit to edit
   ```
 
   | GPU model  | Architecture |
@@ -111,6 +112,7 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
   **Note**: if you cannot download the models through the link, or you want to try more models, you can check out the following solutions and optionally update the downloading script:
   - Another server [here](http://xinlei.sp.cs.cmu.edu/xinleic/tf-faster-rcnn/).
   - Google drive [here](https://drive.google.com/open?id=0B1_fAEgxdnvJSmF3YUlZcHFqWTQ).
+
 
 2. Create a folder and a soft link to use the pre-trained model
   ```Shell
