@@ -113,8 +113,6 @@ If you find it useful, the ``data/cache`` folder created on my side is also shar
   - Another server [here](http://xinlei.sp.cs.cmu.edu/xinleic/tf-faster-rcnn/).
   - Google drive [here](https://drive.google.com/open?id=0B1_fAEgxdnvJSmF3YUlZcHFqWTQ).
 
-  - You can also find various pre-trained models in [here](https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models), which have been trained on the [ILSVRC-2012-CLS](http://www.image-net.org/challenges/LSVRC/2012/) image classification dataset.
-
 2. Create a folder and a soft link to use the pre-trained model
   ```Shell
   # at repository root
