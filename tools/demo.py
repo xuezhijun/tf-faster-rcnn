@@ -22,6 +22,8 @@ from model.nms_wrapper import nms
 
 from utils.timer import Timer
 import tensorflow as tf
+#import matplotlib
+#matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import numpy as np
 import os, cv2
@@ -151,5 +153,5 @@ if __name__ == '__main__':
         print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
         print('Demo for data/demo/{}'.format(im_name))
         demo(sess, net, im_name)
-
+    #plt.savefig('pic.png')
     plt.show()
